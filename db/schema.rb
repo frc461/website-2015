@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150107221929) do
+ActiveRecord::Schema.define(version: 20150107230617) do
+
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.string   "slug",                      null: false
+    t.integer  "sluggable_id",              null: false
+    t.string   "sluggable_type", limit: 50
+    t.string   "scope"
+    t.datetime "created_at"
+  end
+
+  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
+  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
 
   create_table "navs", force: :cascade do |t|
     t.string   "name"
@@ -21,6 +34,18 @@ ActiveRecord::Schema.define(version: 20150107221929) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+<<<<<<< HEAD
+=======
+
+  create_table "news", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "link"
+    t.string   "creator_dn"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+>>>>>>> 1e27ce94d4bec5137cc078154922e6dab1eade4e
 
   create_table "pages", force: :cascade do |t|
     t.string   "name"
@@ -28,6 +53,10 @@ ActiveRecord::Schema.define(version: 20150107221929) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "nav_id"
+    t.integer  "news_id"
+    t.string   "slug"
   end
+
+  add_index "pages", ["slug"], name: "index_pages_on_slug", unique: true
 
 end
