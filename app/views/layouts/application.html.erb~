@@ -37,46 +37,31 @@
 					<li><a href="#">Separated link</a></li>
 				</ul>
 				</li>
-				<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown 2<span class="caret"></span></a>
+				<% @navbar_items.each do |x_nav| %>
+					<% if x_nav.children.count > 0 %>	
+					<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%= x_nav.name %><span class="caret"></span></a>
 				<ul class="dropdown-menu" role="menu">
-					<li><a href="#">Action</a></li>
-					<li><a href="#">Another action</a></li>
-					<li><a href="#">Something else here</a></li>
-					<li class="divider"></li>
-					<li><a href="#">Separated link</a></li>
+					<% navbar_items.children.each do |sane| %>
+						<li><%= link_to sane.name, sane.link %> </li>
+					<% end %>
 				</ul>
-				</li>
+			</li>
+		<% else %>
 
-				<!-- Hey! -->
-				<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown 3<span class="caret"></span></a>
-				<ul class="dropdown-menu" role="menu">
-					<li><a href="#">Action</a></li>
-					<li><a href="#">Another action</a></li>
-					<li><a href="#">Something else here</a></li>
-					<li class="divider"></li>
-					<li><a href="#">Separated link</a></li>
-				</ul>
-				</li>
-				<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown 4<span class="caret"></span></a>
-				<ul class="dropdown-menu" role="menu">
-					<li><a href="#">Action</a></li>
-					<li><a href="#">Another action</a></li>
-					<li><a href="#">Something else here</a></li>
-					<li class="divider"></li>
-					<li><a href="#">Separated link</a></li>
-				</ul>
-				</li>
-			</ul>
-		</div><!-- /.navbar-collapse -->
-	</div><!-- /.container-fluid -->
+				<li><%= link_to x_nav.name, x_nav.link %> </li>
+		<% end %>
+		<% end %>
+		</ul>
+	</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
 </nav>
 <div class="container-fluid main-container">
-
-	<%= yield %>
-
+<div class="row">
+	<div class="col-md-12">
+		<%= yield %>
+	</div>
+</div>
 </div>
 </body>
 </html>

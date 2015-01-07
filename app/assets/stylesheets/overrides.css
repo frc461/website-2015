@@ -5,6 +5,9 @@ body {
 	border:5px solid #ffffff;
 	color:#fff200;
 }
+input{
+	color:#000000;
+}
 .navbar-default{
 	border-color:#000000;
 }

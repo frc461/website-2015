@@ -1,5 +1,5 @@
 body {
-	font-family: 'Josefin Slab', serif;
+	font-family: 'Raleway', serif;
 	background-image: asset-url("background.png");
 	padding:15px,15px;
 	border:5px solid #ffffff;
