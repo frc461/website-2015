@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @nav.name %>
+</p>
+
+<p>
+  <strong>Sort index:</strong>
+  <%= @nav.sort_index %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @nav.link %>
+</p>
+
+<p>
+  <strong>Parent:</strong>
+  <%= @nav.parent_id %>
+</p>
+
+<%= link_to 'Edit', edit_nav_path(@nav) %> |
+<%= link_to 'Back', navs_path %>
