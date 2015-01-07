@@ -1,0 +1,33 @@
+<%= form_for(@nav) do |f| %>
+  <% if @nav.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@nav.errors.count, "error") %> prohibited this nav from being saved:</h2>
+
+      <ul>
+      <% @nav.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :sort_index %><br>
+    <%= f.number_field :sort_index %>
+  </div>
+  <div class="field">
+    <%= f.label :link %><br>
+    <%= f.text_field :link %>
+  </div>
+  <div class="field">
+    <%= f.label :parent_id %><br>
+    <%= f.number_field :parent_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

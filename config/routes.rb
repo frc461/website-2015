@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :navs
+
   resources :pages
 
   get 'welcome/index'
