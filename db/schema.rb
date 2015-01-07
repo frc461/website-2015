@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150107221125) do
+ActiveRecord::Schema.define(version: 20150107224205) do
+
+  create_table "navs", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "sort_index"
+    t.string   "link"
+    t.integer  "parent_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "news", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "link"
+    t.string   "creator_dn"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "pages", force: :cascade do |t|
     t.string   "name"
@@ -19,6 +37,7 @@ ActiveRecord::Schema.define(version: 20150107221125) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "nav_id"
+    t.integer  "news_id"
   end
 
 end
