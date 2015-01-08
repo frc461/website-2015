@@ -43,3 +43,7 @@ gem "bootstrap-sass"
 gem "tzinfo-data"
 
 gem "friendly_id"
+
+# LDAP Requirements
+gem "activeldap"
+gem "net-ldap"
