@@ -19,5 +19,6 @@
 /config/secrets.yml
 /config/initializers/ldap.rb
 
+# This should not be here, but some people do not have these in their global ignore.
 .*
 *~
