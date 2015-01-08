@@ -1,0 +1,3 @@
+require 'active_ldap'
+
+ActiveLdap::Base.setup_connection host: 'labs.whatislife.com', base: 'dc=whatislife,dc=com', bind_dn: 'cn=admin,dc=whatislife,dc=com', password: 'YAYCATSYAY'
