@@ -34,8 +34,6 @@ ActiveRecord::Schema.define(version: 20150107230617) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-<<<<<<< HEAD
-=======
 
   create_table "news", force: :cascade do |t|
     t.string   "name"
@@ -45,7 +43,6 @@ ActiveRecord::Schema.define(version: 20150107230617) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
->>>>>>> 1e27ce94d4bec5137cc078154922e6dab1eade4e
 
   create_table "pages", force: :cascade do |t|
     t.string   "name"
