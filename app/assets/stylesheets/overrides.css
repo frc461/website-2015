@@ -68,3 +68,11 @@ a.navbar-brand{
 body {
 	border: none;
 }
+.light-section{
+  background-color: #d4d2d4;
+  color: #666366; 
+}
+.dark-section{
+  background-color: #666366;
+  color: #d4d2d4;
+}
