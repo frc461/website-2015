@@ -39,7 +39,7 @@ a.navbar-brand {
 	font-family: "Josefin Slab", serif  !important;
 }
 
-.top-image {
+#carousel-example-generic .top-image {
 	background-size:cover;
 	width: auto;
 	height: 300px;
@@ -48,7 +48,7 @@ a.navbar-brand {
     transition: height .25s;
 }
 
-.top-image:hover {
+#carousel-example-generic:hover .top-image {
 	height: 500px;
 }
 .navbar-default{
@@ -70,7 +70,7 @@ body {
 }
 .light-section{
   background-color: #d4d2d4;
-  color: #666366; 
+  color: #666366;
 }
 .dark-section{
   background-color: #666366;
