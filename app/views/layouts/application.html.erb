@@ -4,7 +4,7 @@
 <!--Custom fonts (Josefin Slab) -->
 <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
 <!--Custom fonts (Raleway) -->
-<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>       
+<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 <title>WBI 461 Website</title>
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -38,7 +38,7 @@
 				</ul>
 				</li>
 				<% @navbar_items.each do |x_nav| %>
-					<% if x_nav.children.count > 0 %>	
+					<% if x_nav.children.count > 0 %>
 					<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%= x_nav.name %><span class="caret"></span></a>
 				<ul class="dropdown-menu" role="menu">
@@ -57,11 +57,11 @@
 </div><!-- /.container-fluid -->
 </nav>
 <div class="container-fluid main-container">
-<div class="row">
-	<div class="col-md-12">
-		<%= yield %>
+	<div class="row">
+		<div class="col-md-12">
+			<%= yield %>
+		</div>
 	</div>
-</div>
 </div>
 </body>
 </html>
