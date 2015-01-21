@@ -10,6 +10,7 @@ input{
 }
 .navbar-default{
 	border-color:#242329;
+	box-shadow: none;
 }
 .navbar-brand{
 	height:45px;
@@ -79,4 +80,7 @@ body {
 .dropdown-menu {
 background-color: #5A5960;;
 border: 1px solid #242329;
+}
+.dropdown-menu > li > a {
+color: #FFF200
 }
