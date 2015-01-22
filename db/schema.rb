@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150107230617) do
+ActiveRecord::Schema.define(version: 20150122013717) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -55,5 +55,16 @@ ActiveRecord::Schema.define(version: 20150107230617) do
   end
 
   add_index "pages", ["slug"], name: "index_pages_on_slug", unique: true
+
+  create_table "versions", force: :cascade do |t|
+    t.string   "item_type",  null: false
+    t.integer  "item_id",    null: false
+    t.string   "event",      null: false
+    t.string   "whodunnit"
+    t.text     "object"
+    t.datetime "created_at"
+  end
+
+  add_index "versions", ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
 
 end
