@@ -49,3 +49,4 @@ gem "activeldap"
 gem "net-ldap"
 
 gem "paperclip"
+gem "paper_trail", "~> 3.0.6"
