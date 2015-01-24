@@ -47,3 +47,6 @@ gem "friendly_id"
 # LDAP Requirements
 gem "activeldap"
 gem "net-ldap"
+
+gem "paperclip"
+gem "paper_trail", "~> 3.0.6"

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+    post 'session/create', as: :log_in
+    get 'session/destroy', as: :log_out
+
   resources :news
 
   resources :navs
