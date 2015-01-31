@@ -102,3 +102,7 @@ color: #FFF200;
 .navbar-default .navbar-nav > li > a:hover {
 color: #FFF98E;
 }
+
+.login-group  li {
+	margin: 8px;
+}

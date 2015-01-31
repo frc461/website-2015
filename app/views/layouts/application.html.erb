@@ -36,7 +36,7 @@
                                 <li><%= link_to sane.name, sane.link %> </li>
                             <% end %>
                         </ul>
-                    </li>  
+                    </li>
                 <% else %>
                     <li><%= link_to x_nav.name, x_nav.link %> </li>
                 <% end %>
@@ -51,9 +51,11 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Login</a>
                     <ul class="dropdown-menu" role="menu">
                         <%= form_tag log_in_path do %>
-                            <li><%= text_field_tag :email %></li>
-                            <li><%= password_field_tag :password %></li>
-                            <li><%= submit_tag "Log In", class: 'btn btn-success' %>
+							<div class="form-group login-group">
+								<li><%= text_field_tag :email, nil, class: 'form-control' %></li>
+								<li><%= password_field_tag :password, nil, class: 'form-control' %></li>
+								<li><%= submit_tag "Log In", class: 'btn' %>
+							</div>
                         <% end %>
                     </ul>
                     </li>
