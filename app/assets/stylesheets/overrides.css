@@ -89,9 +89,10 @@ color: #FFF200;
   font-weight: bold;
   color:#fff200;
 }
-.panel-inverse h3
+.panel-inverse .panel-heading
 {
    text-align: center;
+   background-color: #6e6e6d;
 }
 textarea{
 color: black;

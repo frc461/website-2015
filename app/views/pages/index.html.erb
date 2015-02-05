@@ -2,28 +2,19 @@
 
 <h1>Pages</h1>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th width="70%">Name</th>
-      <th width="10%"></th>
-      <th width="10%"></th>
-      <th width="10%"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @pages.each do |page| %>
-      <tr>
-        <td><%= page.name %></td>
-        <td><%= link_to 'Show', page, class: "btn btn-success" %></td>
-        <td><%= link_to 'Edit', edit_page_path(page), class: "btn btn-warning" %></td>
-        <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
+<div class="container">
+<% @pages.each_slice(3) do |group| %>
+<div class="row">
+<% group.each do |page| %>
+		<div class="col-md-3">
+            <div class="panel panel-inverse">
+  	        <div class="panel-heading"><h3><%= link_to page.name, page %></h3></div>
+  				<div class="panel-body"><%= page.content %>
+  				</div>
+			    </div>
+		</div>
+		<% end %>
+</div>
+<% end %>
+</div>
 <%= link_to 'New Page', new_page_path %>
