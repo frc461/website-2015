@@ -5,21 +5,21 @@ body {
 	border:5px solid #ffffff;
 	color:#fff200;
 }
-input{
+input {
 	color:#000000;
 }
-.navbar-default{
+.navbar-default {
 	border-color:#242329;
 	box-shadow: none;
 }
-.navbar-brand{
+.navbar-brand {
 	height:45px;
 	padding:2px 15px;
 }
-.navbar-collapse.collapse{
+.navbar-collapse.collapse {
 	border:none!important;
 }
-blockquote{
+blockquote {
 	margin: 10px;
 	padding:10px;
 
@@ -29,17 +29,15 @@ blockquote{
 	padding-left: 0px;
 	padding-right: 0px;
 }
-a.dropdown-toggle{
+a.dropdown-toggle {
 	height: 70;
 }
-div.carousel-slide{
+div.carousel-slide {
 	margin-top: -5;
 }
-
 a.navbar-brand {
 	font-family: "Josefin Slab", serif  !important;
 }
-
 #carousel-example-generic .top-image {
 	background-size:cover;
 	width: auto;
@@ -48,62 +46,66 @@ a.navbar-brand {
 	-webkit-transition: height .25s; /* For Safari 3.1 to 6.0 */
     transition: height .25s;
 }
-.navbar-default{
+.navbar-default {
 	background-image: none;
 	background-color: #3C3B45;
 }
-a.dropdown-toggle{
+a.dropdown-toggle {
 	color: #fff200!important;
 }
-a.navbar-brand{
+a.navbar-brand {
 	color: #fff200!important;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .active > a {
 	background-image: linear-gradient(to bottom, #3C3B45 0px, #2C2C33 100%)
 }
-
 body {
 	border: none;
 }
-.light-section{
-  background-color: #d4d2d4;
-  color: #666366;
+.light-section {
+    background-color: #d4d2d4;
+    color: #666366;
 }
-.dark-section{
-  background-color: #666366;
-  color: #d4d2d4;
+.dark-section {
+    background-color: #666366;
+    color: #d4d2d4;
 }
 .dropdown-menu {
-background-color: #5A5960;;
-border: 1px solid #242329;
+	background-color: #5A5960;;
+	border: 1px solid #242329;
 }
 .dropdown-menu > li > a {
-color: #FFF200;
+	color: #FFF200;
 }
-.panel-inverse
-{
-  background-color: #575756;
+.panel-inverse {
+    background-color: #575756;
 }
-.panel-inverse h3 a
-{
-  font-weight: bold;
-  color:#fff200;
+.panel-inverse h3 a {
+    font-weight: bold;
+    color:#fff200;
 }
-.panel-inverse .panel-heading
-{
-   text-align: center;
-   background-color: #6e6e6d;
+.panel-inverse .panel-heading {
+    text-align: center;
+    background-color: #6e6e6d;
 }
-textarea{
-color: black;
+textarea {
+	color: black;
 }
 .navbar-default .navbar-nav > li > a {
-color: #FFF200;
+	color: #FFF200;
 }
 .navbar-default .navbar-nav > li > a:hover {
-color: #FFF98E;
+	color: #FFF98E;
 }
-
 .login-group  li {
 	margin: 8px;
+}
+h1 {
+	text-align: center;
+}
+h2 {
+	text-align: center;
+}
+p {
+	text-align: center;
 }
