@@ -48,5 +48,11 @@ gem "friendly_id"
 gem "activeldap"
 gem "net-ldap"
 
+# For uploading files
 gem "paperclip"
+
+# For storing modifications to objects
 gem "paper_trail", "~> 3.0.6"
+
+# For Google Calendar API support
+gem "google_calendar", "~> 0.4"
