@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150122013717) do
+ActiveRecord::Schema.define(version: 20150209234443) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20150122013717) do
     t.integer  "parent_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "page_id"
   end
 
   create_table "news", force: :cascade do |t|
@@ -42,6 +43,7 @@ ActiveRecord::Schema.define(version: 20150122013717) do
     t.string   "creator_dn"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "page_id"
   end
 
   create_table "pages", force: :cascade do |t|
@@ -49,8 +51,6 @@ ActiveRecord::Schema.define(version: 20150122013717) do
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "nav_id"
-    t.integer  "news_id"
     t.string   "slug"
   end
 
