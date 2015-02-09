@@ -1,6 +1,6 @@
 class News < ActiveRecord::Base
-	has_one :photo
-	has_one :page
+	belongs_to :page
+	belongs_to :photo
 	
 	def user
 	    User.find(creator_dn)
