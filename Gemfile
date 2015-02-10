@@ -56,3 +56,6 @@ gem "paper_trail", "~> 3.0.6"
 
 # For Google Calendar API support
 gem "google_calendar", "~> 0.4"
+
+# For Flickr support, where we plan to upload most of our photos
+gem "flickraw", "~> 0.9"
